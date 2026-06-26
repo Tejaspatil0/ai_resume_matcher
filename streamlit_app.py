@@ -8,6 +8,20 @@ from app.core.preprocessor import preprocess_for_matching
 from app.core.matcher import match_resume_to_job
 from app.utils.report_generator import generate_report
 
+import subprocess
+import sys
+
+@st.cache_resource
+def load_spacy_model():
+    try:
+        import spacy
+        return spacy.load("en_core_web_sm")
+    except OSError:
+        subprocess.run([sys.executable, "-m", "spacy",
+                       "download", "en_core_web_sm"])
+        import spacy
+        return spacy.load("en_core_web_sm")
+
 st.set_page_config(
     page_title=PAGE_TITLE,
     page_icon=PAGE_ICON,
