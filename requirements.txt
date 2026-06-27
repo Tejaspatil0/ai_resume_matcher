@@ -9,4 +9,4 @@ plotly
 matplotlib
 fpdf2
 python-dotenv
-Pillow
+Pillow==10.4.0
