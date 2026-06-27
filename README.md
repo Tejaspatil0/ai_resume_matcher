@@ -3,67 +3,200 @@
 > An AI-powered tool that compares resumes with job descriptions
 > and calculates a match score using NLP and Machine Learning.
 
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Latest-red)
+![NLP](https://img.shields.io/badge/NLP-NLTK-green)
+![ML](https://img.shields.io/badge/ML-scikit--learn-orange)
+![License](https://img.shields.io/badge/License-MIT-brightgreen)
+![Status](https://img.shields.io/badge/Status-Live-success)
+
+---
+
 ## 🚀 Live Demo
-Try it here - link coming after deployment!
+
+👉 **[Try it here](https://airesumematcher-j2acwdstgtvqcjtrcp6xcf.streamlit.app/)**
+
+> Upload your resume and a job description to get your match score instantly!
+
+---
 
 ## 📌 Problem Statement
-Recruiters spend an average of 6 seconds reading a resume.
-With hundreds of applications, manually matching each one to
-job requirements is impossible. This tool automates that
-process using AI and NLP.
+
+Recruiters spend an average of **6 seconds** reading a resume.
+With hundreds of applications, manually matching each one to job
+requirements is impossible. This tool automates that process
+using AI and NLP — giving instant match scores and skill gap analysis.
+
+---
 
 ## ✨ Features
-- Upload PDF Resume and Job Description
-- NLP Preprocessing Pipeline using NLTK and spaCy
-- TF-IDF and Cosine Similarity Matching
-- Match Score with Color-coded Results
-- Matching Skills Detection
-- Missing Skills Gap Analysis
-- Downloadable PDF Report
+
+- 📄 Upload PDF Resume and Job Description
+- 🧠 NLP Preprocessing Pipeline using NLTK
+- 📊 TF-IDF Vectorization + Cosine Similarity Matching
+- 🎯 Match Score with Color-coded Results
+- ✅ Matching Skills Detection
+- ❌ Missing Skills Gap Analysis
+- ⭐ Bonus Skills Display
+- 📥 Downloadable PDF Report
+
+---
 
 ## 🛠️ Tech Stack
-- Frontend: Streamlit
-- NLP: NLTK, spaCy
-- Machine Learning: scikit-learn
-- PDF Processing: PyPDF2, pdfplumber
-- Report Generation: fpdf2
-- Language: Python 3.13
+
+| Category | Technology |
+|----------|-----------|
+| Frontend | Streamlit |
+| NLP | NLTK |
+| Machine Learning | scikit-learn |
+| PDF Processing | PyPDF2, pdfplumber |
+| Report Generation | fpdf2 |
+| Data Processing | pandas, numpy |
+| Visualization | plotly, matplotlib |
+| Language | Python 3.11 |
+
+---
 
 ## 🧠 How It Works
-1. Upload Resume PDF and Job Description PDF
-2. Text is extracted from both files
-3. NLP cleans and processes the text
-4. TF-IDF vectors are created and compared
-5. Skills are extracted and matched
-6. Match Score and PDF Report generated
+Resume PDF + Job Description PDF
+
+↓
+
+Text Extraction (PyPDF2 + pdfplumber)
+
+↓
+
+NLP Preprocessing
+
+(Tokenization → Stopword Removal → Lemmatization)
+
+↓
+
+TF-IDF Vectorization + Cosine Similarity
+
+↓
+
+Skills Extraction + Gap Analysis
+
+↓
+
+Match Score + Downloadable PDF Report
+
+---
+
+## 📁 Project Structure
+ai-resume-matcher/
+
+├── app/
+
+│   ├── core/
+
+│   │   ├── extractor.py        # PDF text extraction
+
+│   │   ├── preprocessor.py     # NLP preprocessing
+
+│   │   └── matcher.py          # TF-IDF matching engine
+
+│   └── utils/
+
+│       ├── file_handler.py     # File validation
+
+│       └── report_generator.py # PDF report generation
+
+├── data/                       # Sample files
+
+├── assets/                     # Screenshots
+
+├── streamlit_app.py            # Main entry point
+
+├── config.py                   # Configuration
+
+└── requirements.txt            # Dependencies
+
+---
 
 ## ⚙️ Installation
-1. Clone the repository
-   git clone https://github.com/Tejaspatil0/ai-resume-matcher.git
 
-2. Create virtual environment
-   python -m venv venv
-   venv\Scripts\activate
+```bash
+# 1. Clone the repository
+git clone https://github.com/Tejaspatil0/ai_resume_matcher.git
+cd ai_resume_matcher
 
-3. Install dependencies
-   pip install -r requirements.txt
+# 2. Create virtual environment
+python -m venv venv
 
-4. Download NLP data
-   python -m spacy download en_core_web_sm
+# Windows
+venv\Scripts\activate
 
-5. Run the app
-   streamlit run streamlit_app.py
+# Mac/Linux
+source venv/bin/activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Download NLTK data
+python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk.download('wordnet')"
+
+# 5. Run the app
+streamlit run streamlit_app.py
+```
+
+---
+
+## 📊 Sample Results
+Resume:          John Doe — Python Developer
+
+Job Description: Python Developer — AI & ML Role
+🎯 Final Match Score:  56.14%
+
+📊 TF-IDF Score:       35.24%
+
+🛠️ Skill Match Score:  87.50%
+✅ Matching Skills (21): aws, django, docker, flask,
+
+git, github, python, sql...
+
+❌ Missing Skills  (3):  agile, communication, deep learning
+
+---
 
 ## 🗺️ Roadmap
-- Phase 1: Project Setup - Done
-- Phase 2: PDF Text Extraction - Done
-- Phase 3: NLP Preprocessing - Done
-- Phase 4: TF-IDF Matching - Done
-- Phase 5: PDF Report Generation - Done
-- Phase 6: BERT Semantic AI - Planned
+
+- [x] Phase 1: Project Setup & Architecture
+- [x] Phase 2: PDF Text Extraction
+- [x] Phase 3: NLP Preprocessing Pipeline
+- [x] Phase 4: TF-IDF Matching & Skills Analysis
+- [x] Phase 5: PDF Report Generation
+- [x] Phase 6: Streamlit Deployment
+- [ ] Phase 7: BERT Semantic AI Matching
+- [ ] Phase 8: Multi-Resume Ranking System
+- [ ] Phase 9: Recruiter Dashboard
+
+---
+
+## 🎓 What I Learned
+
+- Building end-to-end NLP pipelines
+- TF-IDF vectorization and Cosine Similarity
+- PDF text extraction techniques
+- Streamlit web app development
+- Git & GitHub version control
+- Cloud deployment
+
+---
 
 ## 👤 Author
-Tejas - Computer Science Engineering Student
+
+**Tejas Patil** — Computer Science Engineering Student
+
+[![GitHub](https://img.shields.io/badge/GitHub-Tejaspatil0-black?logo=github)](https://github.com/Tejaspatil0)
+
+---
 
 ## 📄 License
-MIT License
+
+MIT License — feel free to use this project!
+
+---
+
+⭐ **If you found this useful, please star the repository!**
