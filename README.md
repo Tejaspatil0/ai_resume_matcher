@@ -39,7 +39,7 @@ process using AI and NLP.
 
 ## ⚙️ Installation
 1. Clone the repository
-   git clone https://github.com/YourUsername/ai-resume-matcher.git
+   git clone https://github.com/Tejaspatil0/ai-resume-matcher.git
 
 2. Create virtual environment
    python -m venv venv
